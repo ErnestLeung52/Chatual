@@ -9,7 +9,7 @@ function createWindow() {
   const win = new BrowserWindow({
     width: 800,
     height: 600,
-    backgroundColor: 'green',
+    backgroundColor: 'white',
     webPreferences: {
       // Allow JS in index.html to access node moduels; default is false due to security issue
       nodeIntegration: false,
@@ -25,6 +25,7 @@ function createWindow() {
 
   // Loading the html file
   win.loadFile('index.html');
+
   isDev && win.webContents.openDevTools();
 }
 
