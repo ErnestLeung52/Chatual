@@ -1,28 +1,34 @@
 import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function Navbar() {
+  const navigate = useNavigate();
+
   return (
     <div className='chat-navbar'>
       <nav className='chat-navbar-inner'>
         <div className='chat-navbar-inner-left'>
-          <a href='/' className='btn btn-outline-success ml-2'>
+          <button
+            onClick={() => navigate(-1)}
+            className='btn btn-outline-primary'
+          >
+            Back
+          </button>
+          <Link to='/settings' className='btn btn-outline-success ml-2'>
             Settings
-          </a>
+          </Link>
         </div>
         <div className='chat-navbar-inner-right'>
           <span className='logged-in-user'>Hi User</span>
           <button
-            onClick={() => {}}
-            className='btn btn-sm btn-outline-danger ml-2'
+            onClick={() => navigate('/register')}
+            className='btn btn-outline-danger ml-2'
           >
-            Logout
+            Register
           </button>
-          <button
-            onClick={() => {}}
-            className='btn btn-sm btn-outline-success ml-2'
-          >
+          <Link to='/login' className='btn btn-outline-success ml-2'>
             Login
-          </button>
+          </Link>
         </div>
       </nav>
     </div>

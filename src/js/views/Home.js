@@ -1,8 +1,7 @@
 import React from 'react';
 
-import Navbar from '../components/Navbar';
-import JoinedChats from '../components/JoinedChats';
-import AvailableChats from '../components/AvailableChats';
+import JoinedChatsList from '../components/JoinedChatsList';
+import AvailableChatsList from '../components/AvailableChatsList';
 import ViewTitle from '../components/shared/ViewTitle';
 
 export default function Home() {
@@ -12,23 +11,18 @@ export default function Home() {
     //   <button onClick={sendNotification}>Send Notification</button>
     // </>
 
-    <div className='content-wrapper'>
-      {/* ########## NAVBAR START ############ */}
-      <Navbar />
+    <div className='row no-gutters fh'>
+      <div className='col-3 fh'>
+        {/* ########## CHAT LIST START ############ */}
+        <JoinedChatsList />
+      </div>
 
-      <div className='row no-gutters fh'>
-        <div className='col-3 fh'>
-          {/* ########## CHAT LIST START ############ */}
-          <JoinedChats />
-        </div>
+      <div className='col-9 fh'>
+        {/* ########## CHAT NAME CONTAINER START ############ */}
+        <ViewTitle text='Choose your channel' />
 
-        <div className='col-9 fh'>
-          {/* ########## CHAT NAME CONTAINER START ############ */}
-          <ViewTitle />
-
-          {/* ########## CHAT LIST START ############ */}
-          <AvailableChats />
-        </div>
+        {/* ########## CHAT LIST START ############ */}
+        <AvailableChatsList />
       </div>
     </div>
   );
