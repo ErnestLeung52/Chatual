@@ -2,6 +2,7 @@
 // Specify to run this script in main.js -> no contact isolation
 
 const { ipcRenderer, contextBridge } = require('electron');
+// import { ipcRenderer, contextBridge } from 'electron';
 
 // In the windows context we can access sendNotif, also in app.js file
 // window.sendNotification = (message) => {

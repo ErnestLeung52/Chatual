@@ -1,6 +1,10 @@
 // Main Process
 const { app, BrowserWindow, Notification, ipcMain } = require('electron');
 const path = require('path');
+
+// import { app, BrowserWindow, Notification, ipcMain } from 'electron';
+// import path from 'path';
+
 const isDev = !app.isPackaged;
 
 // Instantiate the browser window class
@@ -18,6 +22,7 @@ function createWindow() {
       // A feature that ensures both preload scripts and Electrons internal logic run in separate context
       // Isolate window object from renderer processor
       contextIsolation: true,
+      // enableRemoteModule: true,
       preload: path.join(__dirname, 'preload.js'),
     },
   });
