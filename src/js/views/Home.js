@@ -8,7 +8,9 @@ import { fetchChats } from '../api/chats';
 
 export default function Home() {
   useEffect(() => {
-    fetchChats();
+    fetchChats().then((chats) => {
+      // debugger;
+    });
   }, []);
 
   return (

@@ -7,7 +7,7 @@ export const fetchChats = () => {
     .then((snapshot) => {
       // data is provided under snapshot.docs
       const data = snapshot.docs.map((doc) => {
-        return doc.data();
+        return { id: doc.id, ...doc.data() };
       });
       return data;
     });
