@@ -1,5 +1,5 @@
 {
-  "name": "electronchat",
+  "name": "chatual",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
@@ -8,7 +8,7 @@
     "watch": "webpack --config webpack.common.js --watch"
   },
   "keywords": [],
-  "author": "",
+  "author": "Ernest Leung",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.17.8",
@@ -25,7 +25,9 @@
     "firebase": "^8.10.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
+    "react-redux": "^7.2.8",
     "react-router-dom": "^6.3.0",
+    "redux": "^4.1.2",
     "sass": "^1.49.11",
     "sass-loader": "^12.6.0",
     "style-loader": "^3.3.1",

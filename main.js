@@ -11,8 +11,8 @@ const isDev = !app.isPackaged;
 function createWindow() {
   // Create a new windows instance, Browser window <- Renderer Process
   const win = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 1200,
+    height: 800,
     backgroundColor: 'white',
     webPreferences: {
       // Allow JS in index.html to access node moduels; default is false due to security issue
