@@ -4,14 +4,20 @@ import JoinedChatsList from '../components/JoinedChatsList';
 import AvailableChatsList from '../components/AvailableChatsList';
 import ViewTitle from '../components/shared/ViewTitle';
 
-import { fetchChats } from '../api/chats';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchChats } from '../actions/chat';
 
 export default function Home() {
+  const dispatch = useDispatch();
+  // state.chat from combined.reducer
+  const chats = useSelector((state) => {
+    console.log('state.chate ====', state);
+    return state.chatsList.items;
+  });
+
   useEffect(() => {
-    fetchChats().then((chats) => {
-      // debugger;
-    });
-  }, []);
+    dispatch(fetchChats());
+  }, [dispatch]);
 
   return (
     // <>
@@ -22,6 +28,7 @@ export default function Home() {
     <div className='row no-gutters fh'>
       <div className='col-3 fh'>
         {/* ########## CHAT LIST START ############ */}
+        {JSON.stringify(chats)}
         <JoinedChatsList />
       </div>
 
