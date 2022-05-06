@@ -28,8 +28,7 @@ export default function Home() {
     <div className='row no-gutters fh'>
       <div className='col-3 fh'>
         {/* ########## CHAT LIST START ############ */}
-        {JSON.stringify(chats)}
-        <JoinedChatsList />
+        <JoinedChatsList chats={chats} />
       </div>
 
       <div className='col-9 fh'>
@@ -37,7 +36,7 @@ export default function Home() {
         <ViewTitle text='Choose your channel' />
 
         {/* ########## CHAT LIST START ############ */}
-        <AvailableChatsList />
+        <AvailableChatsList chats={chats} />
       </div>
     </div>
   );

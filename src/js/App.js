@@ -7,8 +7,7 @@ import { HashRouter as Router, Switch, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 
 import HomeView from './views/Home';
-import LoginView from './views/Login';
-import RegisterView from './views/Register';
+import WelcomeView from './views/Welcome';
 import SettingsView from './views/Settings';
 import ChatView from './views/Chat';
 
@@ -32,11 +31,10 @@ export default function App() {
         <div className='content-wrapper'>
           {/* <button onClick={sendNotification}>notify</button> */}
           <Routes>
+            <Route path='/' exact element={<WelcomeView />} />
             <Route path='/chat/:id' element={<ChatView />} />
             <Route path='/settings' element={<SettingsView />} />
-            <Route path='/login' element={<LoginView />} />
-            <Route path='/register' element={<RegisterView />} />
-            <Route path='/' element={<HomeView />} />
+            <Route path='/home' element={<HomeView />} />
           </Routes>
         </div>
       </Router>
