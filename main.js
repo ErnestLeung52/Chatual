@@ -41,6 +41,8 @@ if (isDev) {
   });
 }
 
+// console.log('testing');
+
 // after main process is done; when app is ready, it will call the createWindow function
 app.whenReady().then(() => {
   createWindow();
